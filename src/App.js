@@ -27,13 +27,6 @@ function App() {
           employeeName.toLowerCase().includes(employeeFilter.toLowerCase())
         );
 
-  const totalMinutes = shifts.reduce((acc, shift) => {
-    const deltaMinutes =
-      (shift.endTime.getTime() - shift.startTime.getTime()) / (1000 * 60);
-
-    return acc + deltaMinutes;
-  }, 0);
-
   const newShiftOnSubmit = (e) => {
     e.preventDefault();
 
@@ -152,7 +145,7 @@ function App() {
           );
         })}
 
-        <Summary minutes={totalMinutes} />
+        <Summary />
       </main>
     </div>
   );

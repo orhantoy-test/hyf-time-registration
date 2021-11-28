@@ -1,8 +1,17 @@
-import PropTypes from "prop-types";
+import { useContext } from "react";
+import { ShiftContext } from "../contexts/ShiftContext";
 
 import formatHours from "../utils/formatHours";
 
-function Summary(props) {
+function Summary() {
+  const { shifts } = useContext(ShiftContext);
+  const totalMinutes = shifts.reduce((acc, shift) => {
+    const deltaMinutes =
+      (shift.endTime.getTime() - shift.startTime.getTime()) / (1000 * 60);
+
+    return acc + deltaMinutes;
+  }, 0);
+
   return (
     <div
       style={{
@@ -21,14 +30,10 @@ function Summary(props) {
           fontWeight: "bold",
         }}
       >
-        {formatHours(props.minutes)}
+        {formatHours(totalMinutes)}
       </div>
     </div>
   );
 }
-
-Summary.propTypes = {
-  minutes: PropTypes.number.isRequired,
-};
 
 export default Summary;
