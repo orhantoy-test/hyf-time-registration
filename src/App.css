@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+.EmployeeShifts {
+  border-spacing: 0;
+  width: 100%;
+  margin-top: 24px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.EmployeeShifts th,
+.EmployeeShifts td {
+  padding: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.EmployeeShifts thead th,
+.EmployeeShifts tbody td {
+  background-color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.EmployeeShifts thead th {
+  border-top: 1px solid #C7D0D9;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.EmployeeShifts thead th:first-child,
+.EmployeeShifts tbody td:first-child {
+  border-left: 1px solid #C7D0D9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.EmployeeShifts thead th,
+.EmployeeShifts tbody td {
+  border-bottom: 1px solid #C7D0D9;
+  border-right: 1px solid #C7D0D9;
+}
+
+.formRow {
+  margin-bottom: 18px;
+}
+
+.formRow label {
+  display: block;
+}
+
+.formRow label span {
+  display: inline-block;
+  font-weight: bold;
+  width: 120px;
+}
+
+.formBtnRow {
+  margin-top: 24px;
+  padding-left: 120px;
 }

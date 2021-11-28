@@ -1,6 +1,24 @@
-# Getting Started with Create React App
+# Time Registration
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+(This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).)
+
+This repo contains a React app based on [this](https://github.com/HackYourFuture-CPH/React/blob/bd65b79c3ae1efa53c07554555db228072202803/week3/lesson-plan.md#time-registration) exercise at HackYourFuture Copenhagen.
+
+## Wireframes
+
+Overview of employee shifts:
+
+![Shift overview](./public/whimsical-shift-overview.png)
+
+Form modal to submit a new shift:
+
+![Submit shift](./public/whimsical-submit-shift.png)
+
+Note: the React app has been simplified to not deal with the hourly wages and prices.
+
+---
+
+Getting Started with Create React App
 
 ## Available Scripts
 
