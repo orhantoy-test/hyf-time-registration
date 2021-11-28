@@ -3,10 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import ShiftProvider from "./contexts/ShiftContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ShiftProvider>
+      <App />
+    </ShiftProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
